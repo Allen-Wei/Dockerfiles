@@ -1,6 +1,5 @@
-FROM ubuntu
+FROM ubuntu:18.04
 
 COPY sources.list /etc/apt
-RUN apt-get update 
 
 CMD ["/bin/bash"]
