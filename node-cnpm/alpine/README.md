@@ -20,7 +20,7 @@ docker pull alanway/node-cnpm:alpine
 
 ```bash
 $ cd express-web-sample
-$ sudo ./run.sh
+$ sudo docker run -d -v "$PWD":/data -p 3000:3000 node-cnpm:alpine sh -c "cd data && npm run start"
 # wait a minute
 $ curl localhost:3000
 ```
