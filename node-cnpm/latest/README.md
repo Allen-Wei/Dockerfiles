@@ -20,7 +20,7 @@ docker pull alanway/node-cnpm
 
 ```bash
 $ cd express-web-sample
-$ sudo ./run.sh
+$ sudo docker run -d -v "$PWD":/data -p 3000:3000 node-cnpm:latest sh -c "cd data && npm run start"
 # wait a minute
 $ curl localhost:3000
 ```
