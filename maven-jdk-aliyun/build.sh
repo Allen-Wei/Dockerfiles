@@ -1,0 +1,1 @@
+docker build -t maven-jdk-aliyun:1.8 .
