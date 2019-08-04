@@ -19,7 +19,6 @@ docker pull alanway/maven-jdk-aliyun:1.8
 ## Usage
 
 ```bash
-$ sudo docker run -it --rm alanway/maven-jdk-aliyun:1.8 bash
-root@c88a3fd1b3a6: apt-get update
-root@c88a3fd1b3a6: apt-get install -y vim # install vim for sample
+$ docker run -it --rm -v "${PWD}/local-repo":/data alanway/maven-jdk-aliyun:1.8 bash
+root@c88a3fd1b3a6: mkdir /projects && cd /projects && mvn archetype:generate -DgroupId=net.alanwei -DartifactId=hello -B
 ```
